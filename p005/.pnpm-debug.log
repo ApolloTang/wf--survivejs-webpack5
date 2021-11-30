@@ -1,0 +1,52 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "p002",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Apollo Tang",
+      "license": "MIT"
+    },
+    "prefix": "/Users/apollotang/1/1-a/10-web/tools-bundler-n-monorepo/webpack/webpack5/book-survivejs-webpack5/wf--survivejs-webpack5/p002"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/apollotang/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/apollotang/1/1-a/10-web/tools-bundler-n-monorepo/webpack/webpack5/book-survivejs-webpack5/wf--survivejs-webpack5/p002/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/apollotang/1/1-a/10-web/tools-bundler-n-monorepo/webpack/webpack5/book-survivejs-webpack5/wf--survivejs-webpack5/p002",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:update-check": {
+    "currentVersion": "6.7.1",
+    "latestVersion": "6.23.2"
+  },
+  "5 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "webpack-nana is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "request": {
+      "url": "https://registry.npmjs.org/webpack-nana"
+    },
+    "response": {
+      "size": 0,
+      "timeout": 60000
+    },
+    "pkgName": "webpack-nana",
+    "pkgsStack": [],
+    "err": {
+      "name": "Error",
+      "message": "GET https://registry.npmjs.org/webpack-nana: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "Error: GET https://registry.npmjs.org/webpack-nana: Not Found - 404\n    at RetryOperation._fn (/Users/apollotang/1/1-sy/dot-config/yarn/global/node_modules/pnpm/dist/pnpm.cjs:78851:18)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"
+    }
+  }
+}
