@@ -1,3 +1,5 @@
+[mini-html-webpack-plugin](https://github.com/styleguidist/mini-html-webpack-plugin) is a miniature version of [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) with only necessary features
+
 ```
 /// package.json
 
