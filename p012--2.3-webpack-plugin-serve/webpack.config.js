@@ -18,8 +18,8 @@ module.exports = {
        port: process.env.PORT || 8080,
        static: './dist',
        liveReload: true,
-       waitForBuild: true
-       // , host:127.0.0.1 // you have set host if you use safary
+       waitForBuild: true,
+       host:'127.0.0.1' // you have set host if you use safary
      }
    )
   ]
