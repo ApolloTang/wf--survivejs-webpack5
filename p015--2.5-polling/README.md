@@ -1,8 +1,7 @@
 
-Polling is mandatory when using Vagrant, Docker, or any
- other solution that doesn't forward events for changes on a file
- located in a folder shared with the virtualized machine where
- webpack is running.
+
+When the files to watch is in a different file operation system (Vagran, Docker) you need to use polling.
+It is not clear from the author's text what he meant, but I think he is talking about the case when we are running webpack in Docker but the file to watch resite in the host computer.  
 
 ```
 
