@@ -8,6 +8,8 @@ module.exports = {
   entry: [
     './src',
     'webpack-plugin-serve/client' // not sure what this is for
+                                  // but it won't work without it won't work
+                                  // https://github.com/shellscape/webpack-plugin-serve/blob/master/recipes/entry-points.md
   ],
 
   mode,
