@@ -19,6 +19,20 @@ const devServer = () => {
   return out
 }
 
+const loadCSS = () => {
+  const out = {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: [ 'style-loader', 'css-loader' ]
+        }
+      ]
+    }
+  }
+  return out
+}
+
 const page = ({title}) => {
   const out = {
     plugins: [
@@ -30,6 +44,7 @@ const page = ({title}) => {
 
 module.exports = {
   devServer,
+  loadCSS,
   page
 }
 

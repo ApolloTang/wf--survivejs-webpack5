@@ -6,7 +6,8 @@ const commonConfig = merge([
   {
     entry: [ './src' ]
   },
-  parts.page( {title:'demo'})
+  parts.page( {title:'demo'}),
+  parts.loadCSS()
 ])
 
 
