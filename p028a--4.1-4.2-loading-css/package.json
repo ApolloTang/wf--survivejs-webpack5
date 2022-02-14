@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "wp --mode development",
-    "watch": "nodemon --watch \"./webpack.config.js\" --exec \"pnpm start\""
+    "start": "wp --mode development --config webpack/webpack.config.js",
+    "watch": "nodemon -w \"./webpack/\" -e .js -x \"pnpm start\""
   },
   "keywords": [],
   "author": "Apollo Tang",
