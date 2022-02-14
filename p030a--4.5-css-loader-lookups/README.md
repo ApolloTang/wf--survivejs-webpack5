@@ -10,7 +10,7 @@ The author said:
 
 But  I am unable to reproduce the bug mentioned in text:
 
-Use device URI works, relative URI also works: 
+Use device URI works, relative URI also works:
 
 ```css
 @import '/Users/...../p030a--4.5-css-loader-lookups/code/statics/green.css';
@@ -49,8 +49,7 @@ body {
 The following are the injected css in style tag:
 
 <img src="./note-imgs/css-loader-options-url-true.png" align=left width="700px" />
-
-
+<img src="./note-imgs/css-loader-options-url-true.png" align=left width="5000px" height="0px" />
 
 ## What happen when css-loader options.url is set to `false`:
 
@@ -83,6 +82,6 @@ const loadCSS = () => {
 
 
 
-css-loader will not parse any paths specified in url: 
+css-loader will not parse any paths specified in url:
 
 <img src="./note-imgs/css-loader-options-url-false.png" align=left width="700px" />
