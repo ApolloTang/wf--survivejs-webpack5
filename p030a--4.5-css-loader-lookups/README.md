@@ -48,8 +48,8 @@ body {
 
 The following are the injected css in style tag:
 
-<img src="./note-imgs/css-loader-options-url-true.png" align=left width="700px" />
-<img src="./note-imgs/css-loader-options-url-true.png" align=left width="5000px" height="0px" />
+<img src="./note-imgs/css-loader-options-url-true.png" align=left" width="700px" />
+<img src="./note-imgs/css-loader-options-url-true.png" align=left" width="5000px" height="0px" />
 
 ## What happen when css-loader options.url is set to `false`:
 
