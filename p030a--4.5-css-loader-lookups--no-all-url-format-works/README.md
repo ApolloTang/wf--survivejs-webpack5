@@ -34,7 +34,7 @@ Given this directory struture:
 
 
 
-#### Non relative url works (path does not start with `./` or `.//` or `/`):
+#### Non relative url works (path does not starts with `./` or `../` or `/`):
 
 ```css
 /* File: <root>/src/main.css */
@@ -46,7 +46,7 @@ Given this directory struture:
 
 
 
-#### Relative url works (path start with `./` or `.//`):
+#### Relative url works (path starts with `./` or `../`):
 
 ```css
 /* File: <root>/src/main.css */
@@ -58,7 +58,7 @@ Given this directory struture:
 
 
 
-#### Root relative url does NOT work (path start with `/`):
+#### Root relative url does NOT work (path starts with `/`):
 
 ```css
 /* File: <root>/src/main.css */
