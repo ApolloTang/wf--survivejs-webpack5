@@ -30,7 +30,7 @@ const loadCSS = () => {
             {
               loader: 'css-loader',
               options: {
-                url: true
+                url: false // <----- !!
               }
             }
           ]
