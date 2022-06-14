@@ -74,4 +74,4 @@ Given this directory struture:
 
 This section also mentioned resolve-url-loader [https://www.npmjs.com/package/resolve-url-loader](https://www.npmjs.com/package/resolve-url-loader)
 
-This webpack loader allows you to have a distributed set SCSS files and assets co-located with those SCSS files.
+This webpack loader allows you to co-locate assets and SCSS files.
