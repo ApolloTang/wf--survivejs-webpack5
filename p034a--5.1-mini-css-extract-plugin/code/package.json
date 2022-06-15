@@ -6,13 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wp --mode development --config webpack/webpack.config.js",
-    "watch": "nodemon -w \"./webpack/\" -e .js -x \"pnpm start\""
+    "watch": "nodemon -w \"./webpack/\" -e .js -x \"pnpm start\"",
+    "build": "wp --mode production --config webpack/webpack.config.js",
+    "watch:build": "nodemon -w \"./webpack/\" -e .js -x \"pnpm build\""
   },
   "keywords": [],
   "author": "Apollo Tang",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
     "mini-html-webpack-plugin": "^3.1.3",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",

@@ -1,5 +1,6 @@
 const { MiniHtmlWebpackPlugin } = require('mini-html-webpack-plugin')
 const { WebpackPluginServe } = require("webpack-plugin-serve")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 const devServer = () => {
   const out = {
@@ -41,6 +42,37 @@ const loadCSS = () => {
   return out
 }
 
+
+const extractCSS = (
+  { options_MiniCssExtractPlugin = {}, loaders = [] } = {}
+) => {
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: options_MiniCssExtractPlugin
+            },
+            "css-loader",
+          ].concat(loaders),
+          sideEffects: true,
+        },
+      ],
+    },
+    plugins: [
+      new MiniCssExtractPlugin(
+        {
+          filename: "[name].css"
+        }
+      )
+    ]
+  }
+}
+
+
 const page = ({title}) => {
   const out = {
     plugins: [
@@ -53,6 +85,7 @@ const page = ({title}) => {
 module.exports = {
   devServer,
   loadCSS,
-  page
+  page,
+  extractCSS,
 }
 

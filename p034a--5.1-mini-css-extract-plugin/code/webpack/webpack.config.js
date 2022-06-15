@@ -7,22 +7,28 @@ const commonConfig = merge([
     entry: [ './src' ]
   },
   parts.page( {title:'demo'}),
-  parts.loadCSS()
 ])
 
 
-const productionConfig = merge([ ])
+const productionConfig = merge([
+  {
+    entry: [ 'webpack-plugin-serve/client' ]
+  },
+  parts.extractCSS()
+])
 
 
 const developmentConfig = merge([
   {
     entry: [ 'webpack-plugin-serve/client' ]
   },
+  parts.loadCSS(),
   parts.devServer()
 ])
 
 
 const getConfig = (mode) => {
+  console.info('mode: ', mode)
   switch (mode) {
     case 'production':
       return merge(commonConfig, productionConfig, {mode})
@@ -31,7 +37,10 @@ const getConfig = (mode) => {
     default:
       throw new Error(`Trying to use an unknow mode, ${mode}`)
   }
+
 }
 
+const config = getConfig(mode)
+// console.dir(config, {depth: 3})
 
-module.exports = getConfig(mode)
+module.exports = config
