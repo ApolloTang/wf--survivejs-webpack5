@@ -21,54 +21,49 @@ const devServer = () => {
 }
 
 const loadCSS = () => {
-  const out = {
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: [
-            'style-loader',
-            {
-              loader: 'css-loader',
-              options: {
-                url: true
-              }
-            }
-          ]
-        }
-      ]
-    }
+  const module = {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
   }
-  return out
+
+  return {
+    module
+  }
 }
 
 
 const extractCSS = (
   { options_MiniCssExtractPlugin = {}, loaders = [] } = {}
 ) => {
+  const module = {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader, options: options_MiniCssExtractPlugin },
+          'css-loader'
+        ].concat(loaders),
+        sideEffects: true,
+      },
+    ],
+  }
+
+  const plugins = [
+    new MiniCssExtractPlugin({
+      filename: "styles/[name].css" // <--- css output file name
+    })
+  ]
+
   return {
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: [
-            {
-              loader: MiniCssExtractPlugin.loader,
-              options: options_MiniCssExtractPlugin
-            },
-            "css-loader",
-          ].concat(loaders),
-          sideEffects: true,
-        },
-      ],
-    },
-    plugins: [
-      new MiniCssExtractPlugin(
-        {
-          filename: "[name].css"
-        }
-      )
-    ]
+    module,
+    plugins
   }
 }
 
