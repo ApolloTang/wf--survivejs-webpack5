@@ -50,7 +50,7 @@ const extractCSS = (
           { loader: MiniCssExtractPlugin.loader, options: options_MiniCssExtractPlugin },
           'css-loader'
         ].concat(loaders),
-        sideEffects: true,
+        sideEffects: true, // <--- if sideEffect is false css will be tree shaked
       },
     ],
   }
