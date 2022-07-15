@@ -6,6 +6,7 @@ const part_devServer = require('./webpack-part--dev-server.js')
 const part_loadCss = require('./webpack-part--load-css.js')
 const part_extractCss = require('./webpack-part--extract-css.js')
 
+const DEBUG_PROD = false
 
 const commonConfig = merge([
   {
@@ -33,10 +34,9 @@ const developmentConfig = merge([
 
 
 const getConfig = (mode) => {
-  console.info('mode: ', mode)
   switch (mode) {
     case 'production':
-      return merge(commonConfig, productionConfig, {mode})
+      return merge(commonConfig, productionConfig, {mode: !DEBUG_PROD ? mode : 'none'})
     case 'development':
       return merge(commonConfig, developmentConfig, {mode})
     default:
