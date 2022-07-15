@@ -1,5 +1,5 @@
-const { mode } = require("webpack-nano/argv")
-const { merge } = require("webpack-merge")
+const { mode } = require('webpack-nano/argv')
+const { merge } = require('webpack-merge')
 
 const part_page = require('./webpack-part--page.js')
 const part_devServer = require('./webpack-part--dev-server.js')
