@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -fr ./dist",
     "dev": "wp --mode development --config webpack/webpack.config.js",
     "dev:w": "nodemon -w \"./webpack/\" -e .js -x \"pnpm dev\"",
-    "build": "wp --mode production --config webpack/webpack.config.js",
-    "build:w": "nodemon -w \"./webpack/\" -e .js -x \"pnpm build\""
+    "build": "pnpm clean && wp --mode production --config webpack/webpack.config.js",
+    "build:w": "nodemon -w \"./webpack/\" -w \"./src/\" -e .js -x \"pnpm build\""
   },
   "keywords": [],
   "author": "Apollo Tang",
