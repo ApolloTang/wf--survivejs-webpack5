@@ -6,7 +6,7 @@ const part_devServer = require('./webpack-part--dev-server.js')
 const part_loadCss = require('./webpack-part--load-css.js')
 const part_extractCss = require('./webpack-part--extract-css.js')
 
-const cssloader_postcss = require('./webpack-part--cssloaders--postcss.js')
+const cssloader_postcss = require('./webpack-part--cssloader--postcss.js')
 
 const DEBUG_PROD = false
 
