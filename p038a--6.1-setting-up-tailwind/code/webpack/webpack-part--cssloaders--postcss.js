@@ -1,10 +1,10 @@
 const tailwindcss = require('tailwindcss')
 
-tailwind = () => ({
+postcss = () => ({
   loader: "postcss-loader",
   options: {
     postcssOptions: { plugins: [tailwindcss] }
   }
 });
 
-module.exports = tailwind;
+module.exports = postcss;

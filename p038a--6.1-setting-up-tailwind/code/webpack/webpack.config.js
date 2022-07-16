@@ -6,7 +6,7 @@ const part_devServer = require('./webpack-part--dev-server.js')
 const part_loadCss = require('./webpack-part--load-css.js')
 const part_extractCss = require('./webpack-part--extract-css.js')
 
-const cssloader_tailwind = require('./webpack-part--cssloaders--tailwind.js')
+const cssloader_postcss = require('./webpack-part--cssloaders--postcss.js')
 
 const DEBUG_PROD = false
 
@@ -20,7 +20,7 @@ const commonConfig = merge([
 
 const productionConfig = merge([
   part_extractCss({
-    loaders: [cssloader_tailwind()]
+    loaders: [cssloader_postcss()]
   })
 ])
 
@@ -31,7 +31,7 @@ const developmentConfig = merge([
   },
   part_devServer(),
   part_loadCss({
-    loaders: [cssloader_tailwind()]
+    loaders: [cssloader_postcss()]
   })
 ])
 
