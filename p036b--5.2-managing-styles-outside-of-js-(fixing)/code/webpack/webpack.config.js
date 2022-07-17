@@ -23,13 +23,15 @@ const commonConfig = merge([
 
 
 const productionConfig = merge([
-  // part_extractCss()
+  part_extractCss()
 ])
 
 
 const developmentConfig = merge([
   {
-    entry: [ 'webpack-plugin-serve/client' ]
+    entry: {
+      main: [ 'webpack-plugin-serve/client' ]
+    }
   },
   part_devServer(),
   part_loadCss()

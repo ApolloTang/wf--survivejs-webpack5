@@ -9,7 +9,7 @@
     "dev": "wp --mode development --config webpack/webpack.config.js",
     "dev:w": "nodemon -w \"./webpack/\" -e .js -x \"pnpm dev\"",
     "build": "pnpm clean && wp --mode production --config webpack/webpack.config.js",
-    "build:w": "nodemon -w \"./webpack/\" -w \"./src/\" -e .js -x \"pnpm build\""
+    "build:w": "nodemon -w \"./webpack/\" -w \"./src/\" -e .css,.js -x \"pnpm build\""
   },
   "keywords": [],
   "author": "Apollo Tang",

@@ -1,0 +1,23 @@
+body {
+  background: cornsilk;
+  display: flex;
+  flex-direction: column;
+}
+
+body div {
+  outline: solid 1px black;
+  width: 100px;
+  height: 100px;
+}
+
+/* non relative url works */
+.red {
+  background-image: url(../7ff9ffba2cf752ff8a92.png);
+}
+
+/* relative url works */
+.green {
+  background-image: url(../a58aa4eea32108358fcd.png);
+}
+
+
