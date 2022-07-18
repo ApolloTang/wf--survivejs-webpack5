@@ -1,21 +1,38 @@
-# 5.2 Managing styles outside of JavaScript
+# 5.2 Managing styles outside of JavaScript (fixed)
 
-p036a--5.2-managing-styles-outside-of-js-(not-working)
+p036a--5.2-managing-styles-outside-of-js-(fixed)/
 
+---
 
-I can't get this to work. Error: 
-
-![Error](./docs/execution-error.png)
-
+In this example we no longer import css in our src/*.js. See below the statement in line 2 is commented out:
 
 
-I think this is because entry point has to be javascript. 
+![not importing css in javascript](./docs/delta--component.js.png)
 
-The following are possible solutions; need more research:
 
-https://stackoverflow.com/questions/48843690/use-sass-as-a-entry-point-in-webpack
 
-https://florianbrinkmann.com/en/webpack-sass-multiple-entry-points-5351/
+Instead we have a separate entry point for css in our webpack.config.js's `commonConfig` :
+
+```js
+const commonConfig = merge([
+  {
+    entry: {
+      main: [ './src/main.js' ],
+      style: glob.sync('./src/**/*.css')
+         //                       ^^^^
+         // Although entry point is css, it
+         // is loaded through style.js
+    }
+  },
+  part_page({title:'demo'}),
+])
+```
+
+Webpack will generate a file `style.js` to load this css file using the css-loader or extract-css:
+
+
+
+![not importing css in javascript](./docs/delta--webpack-config.js.png)
 
 
 

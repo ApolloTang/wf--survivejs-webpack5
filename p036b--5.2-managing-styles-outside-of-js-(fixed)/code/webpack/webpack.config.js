@@ -12,10 +12,12 @@ const DEBUG_PROD = false
 
 const commonConfig = merge([
   {
-    // entry: [ './src/main.js' ]
     entry: {
       main: [ './src/main.js' ],
       style: glob.sync('./src/**/*.css')
+         //                       ^^^^
+         // Although entry point is css, it
+         // is loaded through style.js
     }
   },
   part_page({title:'demo'}),
@@ -52,6 +54,6 @@ const getConfig = (mode) => {
 
 
 const config = getConfig(mode)
-console.dir(config, {depth: 3})
+// console.dir(config, {depth: 3})
 
 module.exports = config
