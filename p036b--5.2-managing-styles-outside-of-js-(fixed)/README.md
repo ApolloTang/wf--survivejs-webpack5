@@ -2,6 +2,8 @@
 
 p036a--5.2-managing-styles-outside-of-js-(fixed)/
 
+see conversation on: [survivejs.com/webpack/styling/separating-css/](http://disq.us/p/2pwyjst)
+
 ---
 
 In this example we no longer import css in our src/*.js. See below the statement in line 2 is commented out:
