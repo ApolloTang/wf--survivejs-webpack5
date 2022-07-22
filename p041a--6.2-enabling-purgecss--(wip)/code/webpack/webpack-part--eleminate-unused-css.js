@@ -1,8 +1,11 @@
-const path = require('path');
-const glob = require('glob');
-const PurgeCSSPlugin = require('purgecss-webpack-plugin');
+const path = require('path')
+const glob = require('glob')
+const PurgeCSSPlugin = require('purgecss-webpack-plugin')
 
-const ALL_FILES = glob.sync(path.resolve(__dirname, '../', 'src/*.js'));
+const ALL_FILES = [
+  ...glob.sync( path.resolve(__dirname, '../', 'src/*.html')),
+  ...glob.sync( path.resolve(__dirname, '../', 'src/*.js'))
+]
 
 eliminateUnusedCSS = () => ({
   plugins: [

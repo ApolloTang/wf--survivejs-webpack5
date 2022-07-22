@@ -24,8 +24,16 @@ body div {
   background-image: url(./statics/green.png);
 }
 
+.unused {
+  /**
+   * this class is not being use and should not be present in dist/
+  */
+  color: 'black';
+}
 
-/* the following css is not being use and should be present in dist/ */
-.unused-class {
+.class-in-html {
+  /**
+   * this class is being use in foo.html so it should not be present in dist/
+  */
   color: 'black';
 }
