@@ -23,3 +23,9 @@ body div {
 .green {
   background-image: url(./statics/green.png);
 }
+
+
+/* the following css is not being use and should be present in dist/ */
+.unused-class {
+  color: 'black';
+}
