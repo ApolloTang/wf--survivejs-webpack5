@@ -26,6 +26,14 @@
 4. Use the user's configured `sans` font-family by default.
 */
 
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
@@ -306,6 +314,10 @@ body div {
   background-image: url(../a58aa4eea32108358fcd.png);
 }
 
-
-/* the following css is not being use and should be present in dist/ */
+.class-in-html {
+  /**
+   * this class is being use in foo.html so it should not be present in dist/
+  */
+  color: 'black';
+}
 
