@@ -26,14 +26,16 @@ body div {
 
 .unused {
   /**
-   * this class is not being use and should not be present in dist/
+   * this class is not being used in the project, so purgecss-webpack-plugin
+   * will eleminated it from the bundle's output.
   */
   color: 'black';
 }
 
 .class-in-html {
   /**
-   * this class is being use in foo.html so it should not be present in dist/
+   * this class name is being used in 'foo.html', so purgecss-webpack-plugin
+   * will not eleminated it from the bundle's output.
   */
   color: 'black';
 }
