@@ -57,3 +57,12 @@ the class `.unused` will not be present in the output bundle because it is not i
 
 
 
+---
+
+✅ Tailwind includes PurgeCSS out of the box and it can be preferable to use that. See Tailwind 
+[documentation](https://tailwindcss.com/docs/content-configuration#safelisting-classes) for more information.
+
+
+
+https://github.com/uncss/uncss is an alternative to PurgeCss.
+
