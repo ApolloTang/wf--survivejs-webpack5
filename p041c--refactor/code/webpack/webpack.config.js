@@ -7,7 +7,7 @@ const part_loadCss = require('./webpack-part--load-css.js')
 const part_extractCss = require('./webpack-part--extract-css.js')
 const part_eliminateUnusedCSS = require('./webpack-part--eleminate-unused-css.js')
 
-const cssloader_postcss = require('./webpack-part--cssloader--postcss.js')
+const cssloader_postcss = require('./webpack-part--cssloader--postcss/')
 
 const DEBUG_PROD = false
 
