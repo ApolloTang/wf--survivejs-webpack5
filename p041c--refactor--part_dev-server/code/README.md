@@ -1,3 +1,5 @@
 # Refactor
 
-Clean up `part--dev-server` ([shellscape](https://github.com/shellscape)/**[webpack-plugin-serve](https://github.com/shellscape/webpack-plugin-serve)**). Moved all related configurations to one file.
+- Clean up: consolidate related configurations of  to one file. `webpack-plugin-serve` into file `webpack-part--dev-server.js`
+
+- Clean up: move tailwindcss configuration into webpack folder.
