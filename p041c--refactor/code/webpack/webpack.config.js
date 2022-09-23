@@ -17,17 +17,19 @@ const commonConfig = merge([
   part_extractCss({
     loaders: [cssloader_postcss()]
   }),
-  part_eliminateUnusedCSS()
 ])
 
 
 const productionConfig = merge([
+  part_eliminateUnusedCSS()
 ])
 
 
 const developmentConfig = merge([
   part_devServer(),
-  // part_loadCss({ loaders: [cssloader_postcss()] })
+  // part_loadCss({
+  //   loaders: [cssloader_postcss()]
+  // })
 ])
 
 
