@@ -9,9 +9,6 @@ const part_eliminateUnusedCSS = require('./webpack-part--eleminate-unused-css.js
 
 const cssloader_postcss = require('./webpack-part--cssloader--postcss/')
 
-const DEBUG_PROD = false
-
-
 const commonConfig = merge([
   {
     entry: [ './src/main.js' ]
@@ -34,10 +31,10 @@ const developmentConfig = merge([
 ])
 
 
-const getConfig = (mode) => {
+const getConfig = (mode, debug=false) => {
   switch (mode) {
     case 'production':
-      return merge(commonConfig, productionConfig, {mode: !DEBUG_PROD ? mode : 'none'})
+      return merge(commonConfig, productionConfig, {mode: !debug ? mode : 'none'})
     case 'development':
       return merge(commonConfig, developmentConfig, {mode})
     default:
