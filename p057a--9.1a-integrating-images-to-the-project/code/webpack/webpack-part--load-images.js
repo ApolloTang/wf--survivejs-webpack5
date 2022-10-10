@@ -1,5 +1,5 @@
 const loadImages = (
-  { limit } = { limit:1500 }
+  { limit } = { limit: 1 * 1024 }
 ) => {
   const module = {
     rules: [
@@ -8,7 +8,7 @@ const loadImages = (
         type: 'asset',
         parser: {
           dataUrlCondition: {
-            maxSize: limit
+            maxSize: limit // if images size is less than limit, injected into the bundle as a Base64-encoded string.
           }
         }
       }

@@ -19,11 +19,16 @@ export default (text = 'Hello world') => {
   margenta.textContent='margenta'
   margenta.className='margenta'
 
+  const cat = document.createElement('div')
+  cat.textContent='cat'
+  cat.className='cat'
+
   return {
     red,
     green,
     blue,
     cyan,
     margenta,
+    cat,
   }
 }

@@ -6,3 +6,4 @@ console.log(elements)
 
 document.body.appendChild(elements.red)
 document.body.appendChild(elements.green)
+document.body.appendChild(elements.cat)

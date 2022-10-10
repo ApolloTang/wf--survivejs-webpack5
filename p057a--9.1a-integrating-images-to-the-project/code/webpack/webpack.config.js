@@ -19,6 +19,7 @@ const commonConfig = merge([
     loaders: [cssloader_postcss()]
   }),
   part_loadImages(),
+  // part_loadImages({limit: 10 * 1024 }),
 ])
 
 

@@ -16,12 +16,18 @@ body div {
 
 /* non relative url works */
 .red {
-  background-image: url(statics/red.png);
+  background-image: url(statics/red.png); /* 333 bytes */
 }
 
 /* relative url works */
 .green {
-  background-image: url(./statics/green.png);
+  background-image: url(./statics/green.png);  /* 333 bytes */
+}
+
+.cat {
+  background-image: url(./statics/cat.jpg);   /* 7 KB */
+  width: 267px;
+  height: 189px;
 }
 
 .unused {
