@@ -39,8 +39,9 @@ The property `module.rules[type]` controls the behaviour of Assets Modules. When
 
 ## Result:
 
-Left: .../p044a--7.2a-defining-a-browserslist/code/dist--dev
-Right: .../p057a--9.1a-integrating-images-to-the-project/code/dist--dev
+Left: .../p044a--7.2a-defining-a-browserslist/code/dist--dev/styles/main.css
+
+Right: .../p057a--9.1a-integrating-images-to-the-project/code/dist--dev/styles/main.css
 
 ![](./documents/before-after--images-emitted-as-base64-within-bundle.png)
 
