@@ -1,8 +1,6 @@
-# 9.1 Integrating-images-to-the-project
+# 9.4 loading svgs
 
-## output-assetModuleFilename
 
-[output.assetModuleFilename](https://webpack.js.org/configuration/output/#outputassetmodulefilename) field can be used to control where the assets are emitted:
 
 ```js
 // file: .../code/webpack/webpack-part--load-images.js
@@ -20,13 +18,17 @@ const loadImages = (
             maxSize: limit // if images size is less than limit, injected into the bundle as a Base64-encoded string.
           }
         }
-      }
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset',
+      },
     ]
   }
 
   return {
     output: {
-      assetModuleFilename: 'images/[hash][ext][query]',  
+      assetModuleFilename: 'images/[hash][ext][query]',
     },
     module
   }
@@ -35,15 +37,4 @@ const loadImages = (
 
 module.exports = loadImages
 ```
-
-
-
-## Result:
-
-Left: .../p057a--9.1a-integrating-images-to-the-project/code/
-Right: .../9.1b-output-assetModuleFilename/code/
-
-![](./documents/before-after--w-assetModuleFilename.png)
-
-
 
