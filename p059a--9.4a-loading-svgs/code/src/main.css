@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: cornsilk;
+  display: flex;
+  flex-direction: column;
+}
+
+body div {
+  outline: solid 1px black;
+  width: 100px;
+  height: 100px;
+}
+
+/* non relative url works */
+.red {
+  background-image: url(statics/red.png); /* 333 bytes */
+}
+
+/* relative url works */
+.green {
+  background-image: url(./statics/green.png);  /* 333 bytes */
+}
+
+.cat {
+  background-image: url(./statics/cat.jpg);   /* 7 KB */
+  width: 267px;
+  height: 189px;
+}
+
+.myimg_svg {
+  width: 20%;
+}
+
+.div_svg {
+  background-image: url(./statics/copyleft.svg);   /* 207 bytes */
+}
+
+.unused {
+  /**
+   * this class is not being used in the project, so purgecss-webpack-plugin
+   * will eleminated it from the bundle's output.
+  */
+  color: 'black';
+}
+
+.class-in-html {
+  /**
+   * this class name is being used in 'foo.html', so purgecss-webpack-plugin
+   * will not eleminated it from the bundle's output.
+  */
+  color: 'black';
+}
