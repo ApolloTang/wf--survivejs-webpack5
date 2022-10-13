@@ -1,0 +1,46 @@
+/* ++++ style-file [start] fonts/roboto/index.css */
+
+@font-face {
+    font-family: 'RobotoThin';
+    src: local('Roboto Thin'),
+         local('Roboto-Thin'),
+         url(../fonts/Roboto-Thin-6150ad9c58ad943ec372.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: local('Roboto Light'),
+         local('Roboto-Light'),
+         url(../fonts/Roboto-Light-057aa247b66ac02c29b3.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: local('Roboto'),
+         local('Roboto-Regular'),
+         url(../fonts/Roboto-Regular-71779d80f05ad6beea6e.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: local('Roboto Medium'),
+         local('Roboto-Medium'),
+         url(../fonts/Roboto-Medium-ea7d3afe129bb3e2ff35.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: local('Roboto Bold'),
+         local('Roboto-Bold'),
+         url(../fonts/Roboto-Bold-9630c546d8b557e14b59.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoBlack';
+    src: local('Roboto Black'),
+         local('Roboto-Black'),
+         url(../fonts/Roboto-Black-7f3ed21e03b4eb1c140e.ttf) format('truetype');
+}
+
+/* ++++ style-file [end] fonts/roboto/index.css */
+
