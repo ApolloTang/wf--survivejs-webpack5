@@ -1,3 +1,5 @@
+const pathResolve = require('path').resolve
+
 const { mode } = require('webpack-nano/argv')
 const { merge } = require('webpack-merge')
 
@@ -11,6 +13,8 @@ const part_loadFonts = require('./webpack-part--load-fonts.js')
 
 const cssloader_postcss = require('./webpack-part--cssloader--postcss/')
 
+const ABS_PATH_TO_FONTS_DEFAULT = pathResolve(__dirname, '../src/fonts')
+
 const commonConfig = merge([
   {
     entry: [ './src/main.js' ]
@@ -20,7 +24,8 @@ const commonConfig = merge([
     loaders: [cssloader_postcss()]
   }),
   part_loadImages(),
-  part_loadFonts(),
+  // part_loadImages({ absPathToFonts: ABS_PATH_TO_FONTS_DEFAULT }),
+  part_loadFonts({ absPathToFonts: ABS_PATH_TO_FONTS_DEFAULT }),
 ])
 
 

@@ -1,8 +1,9 @@
 const pathResolve = require('path').resolve
 
-const loadFonts = () => {
-  const absPathToFont = pathResolve(__dirname, '../src/fonts');
-  console.log('xxxx absPathToFont: ',absPathToFont)
+const loadFonts = ( opts ) => {
+
+  const absPathToFonts = (opts && opts.absPathToFonts)
+  if (!absPathToFonts) throw new Error('Path to fonts required')
 
   const module = {
     rules: [
@@ -12,7 +13,7 @@ const loadFonts = () => {
         generator: {
           filename: 'fonts/[name]-[hash][ext][query]'
         },
-        include: absPathToFont
+        include: absPathToFonts
       },
     ]
   }

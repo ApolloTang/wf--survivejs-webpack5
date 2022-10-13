@@ -4,7 +4,7 @@ import main from './main.css'
 const elements = component()
 console.log(elements)
 
-import font from './fonts/index.js'
+import './fonts/index.js'
 document.body.appendChild(elements.fontManropeBold)
 document.body.appendChild(elements.fontManropeRegular)
 document.body.appendChild(elements.fontManropeLight)
