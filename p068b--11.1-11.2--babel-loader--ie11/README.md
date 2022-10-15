@@ -22,7 +22,7 @@ https://webpack.js.org/configuration/output/#outputenvironment
 
 
 
-### Cannot use `{mode:'none'}`
+## Cannot use `{mode:'none'}`
 
 Cannot use `{mode: none}` as described in this comment in this [Stackoverflow answer](https://stackoverflow.com/a/52264800/3136861) .
 
@@ -30,7 +30,7 @@ It may have something to do with IE11 dislike `eval()` code that gets inserted b
 
 
 
-### Webpack need to know it is targeting web as well emmiting ES5 syntax
+## Webpack need to know it is targeting web, it also nee to emmiting ES5 syntax
 
 Try the following, but there still more problem: 
 
