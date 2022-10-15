@@ -4,7 +4,7 @@
 
 The following is required for bundle generate by webpack5 to work in IE11 because Webpack5 itself now uses arrow fuction in its  code for internal functionalities  (IE11 does not support arrow function): 
 
-```json
+```js
 output: {
   environment: {
     arrowFunction: false, // Do not use arrowfunction in webpack internal
