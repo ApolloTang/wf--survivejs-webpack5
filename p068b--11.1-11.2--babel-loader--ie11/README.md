@@ -1,4 +1,10 @@
+
+
 # Babel loader (IE11 support)
+
+**🚧WIP🚧 This is still wip, not fully tested in IE11**
+
+
 
 ## Top level function (IIFE) is still arrow (on Webpack 5)
 
