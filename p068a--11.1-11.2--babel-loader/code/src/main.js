@@ -17,3 +17,5 @@ document.body.appendChild(elements.cat)
 document.body.appendChild(elements.imgCopyLeft)
 document.body.appendChild(elements.imgNy1)
 
+import('./js-check/')
+
