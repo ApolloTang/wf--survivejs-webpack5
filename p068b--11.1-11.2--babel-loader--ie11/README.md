@@ -30,7 +30,7 @@ It may have something to do with IE11 dislike `eval()` code that gets inserted b
 
 
 
-## Webpack need to know it is targeting web, it also nee to emmiting ES5 syntax
+## Webpack needs to know it is targeting web, it also needs to emmit ES5 so it can run on IE11
 
 Try the following, but there still more problem: 
 
