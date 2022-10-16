@@ -1,28 +1,28 @@
-/* non relative url works */
-body div {
+.container--loading-images div {
   outline: solid 1px black;
   width: 100px;
   height: 100px;
 }
 
-.red {
+/* non relative url works */
+.container--loading-images .red {
   background-image: url(./statics/red.png); /* 333 bytes */
 }
 
-.green {
+.container--loading-images .green {
   background-image: url(./statics/green.png);  /* 333 bytes */
 }
 
-.cat {
+.container--loading-images .cat {
   background-image: url(./statics/cat.jpg);   /* 7 KB */
   width: 267px;
   height: 189px;
 }
 
-.img-ny1 {
-  width: 20%;
+.container--loading-images .img-ny1 {
+  width: 30%;
 }
 
-.div-copy-left {
+.container--loading-images .div-copy-left {
   background-image: url(./statics/copyleft.svg);   /* 207 bytes */
 }
