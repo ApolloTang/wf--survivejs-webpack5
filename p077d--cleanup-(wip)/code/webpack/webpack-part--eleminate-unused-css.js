@@ -6,8 +6,8 @@ const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
 // glob patterns to look for class names. The class names found during
 // this scan will not be elimentated from the output bundles.
 const ALL_FILES = [
-  ...glob.sync( path.resolve(__dirname, '../', 'src/*.html')),
-  ...glob.sync( path.resolve(__dirname, '../', 'src/*.js'))
+  ...glob.sync( path.resolve(__dirname, '../', 'src/**/*.html')),
+  ...glob.sync( path.resolve(__dirname, '../', 'src/**/*.js'))
 ]
 
 eliminateUnusedCSS = () => ({

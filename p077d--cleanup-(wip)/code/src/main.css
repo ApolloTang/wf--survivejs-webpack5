@@ -41,18 +41,3 @@ body div {
 .font-manrope-regular { font-family: ManropeRegular; }
 .font-manrope-light { font-family: ManropeLight; }
 
-.unused {
-  /**
-   * this class is not being used in the project, so purgecss-webpack-plugin
-   * will eleminated it from the bundle's output.
-  */
-  color: 'black';
-}
-
-.class-in-html {
-  /**
-   * this class name is being used in 'foo.html', so purgecss-webpack-plugin
-   * will not eleminated it from the bundle's output.
-  */
-  color: 'black';
-}
