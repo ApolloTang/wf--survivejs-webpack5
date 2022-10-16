@@ -2,7 +2,6 @@ import component from './component'
 import './index.css'
 
 const elements = component()
-console.log(elements)
 
 const container = document.createElement('div')
 container.className='container--loading-images'

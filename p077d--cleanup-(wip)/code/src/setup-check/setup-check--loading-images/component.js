@@ -1,5 +1,4 @@
 import svg_ny1 from  './statics/ny1.svg'
-import svg_copyleft from  './statics/copyleft.svg'
 
 export default (text = 'Hello world') => {
   const red = document.createElement('div')
