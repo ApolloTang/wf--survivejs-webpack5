@@ -1,5 +1,5 @@
 import  './setup-check--purge-css/'
-import  './setup-check-js/index.js'
+import  './setup-check--js/index.js'
 
 export {}
 
