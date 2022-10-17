@@ -11,3 +11,4 @@ try {
 }
 
 
+console.info('done: setup-check--js/es7-pollyfill-array-include.setup-check.js')

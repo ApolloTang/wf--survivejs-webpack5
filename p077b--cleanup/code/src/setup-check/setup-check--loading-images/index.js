@@ -12,3 +12,5 @@ container.appendChild(elements.green)
 container.appendChild(elements.cat)
 container.appendChild(elements.imgCopyLeft)
 container.appendChild(elements.imgNy1)
+
+console.info('done: setup-check--loading-images/index.js')

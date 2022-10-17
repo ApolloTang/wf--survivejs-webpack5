@@ -12,3 +12,5 @@ document.body.appendChild(container)
 //
 container.appendChild(elements.fontManropeRegular)
 container.appendChild(elements.fontManropeLight)
+
+console.info('done: setup-check--loading-fonts/index.js')

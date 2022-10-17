@@ -6,3 +6,4 @@ console.assert(MyClass.getMyStaticProp() === staticPropValue, 'ES6 Class static 
 console.assert(myClass.getMyClassProp() === classPropValue,   'ES6 Class property works')
 console.assert(myClass.__proto__.getMyClassProp === void 0,   'ES6 Class property initializers are not on the prototype')
 
+console.info('done: setup-check--js/es6-class.setup-check.js')

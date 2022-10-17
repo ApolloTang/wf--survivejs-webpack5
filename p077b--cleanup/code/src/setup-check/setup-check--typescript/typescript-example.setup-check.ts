@@ -19,3 +19,5 @@ try {
   invalidUser = true
 }
 console.assert(invalidUser,      'Validation work' )
+
+console.info('done: setup-check--typescript/typescript-example.setup-check.ts')
