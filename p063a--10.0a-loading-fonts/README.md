@@ -1,6 +1,6 @@
 # 9.4 loading fonts
 
-
+**[NOTE] To see fonts in action make sure you unzip monrope.zip in src/fonts/**
 
 ```js
 // file: .../code/webpack/webpack-part--load-fonts.js
