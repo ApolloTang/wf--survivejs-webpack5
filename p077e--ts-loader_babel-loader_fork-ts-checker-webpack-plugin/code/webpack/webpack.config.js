@@ -16,6 +16,7 @@ const cssloader_postcss = require('./webpack-part--cssloader--postcss/')
 
 const ABS_PATH_TO_FONTS_DEFAULT = path.resolve(__dirname, '..', 'src/fonts')
 const ABS_PATH_TO_SRC = path.resolve(__dirname, '..', 'src')
+const ABS_PATH_TO_TSCONFIG = path.resolve(__dirname, '..', 'tsconfig.json')
 
 const commonConfig = merge([
   {
@@ -52,7 +53,7 @@ const productionConfig = merge([
 
 const developmentConfig = merge([
   part_devServer(),
-  part_forkTsCheckerWebpackPlugin(),
+  part_forkTsCheckerWebpackPlugin({absPathToTsConfig: ABS_PATH_TO_TSCONFIG}),
   // part_loadCss({
   //   loaders: [cssloader_postcss()]
   // })

@@ -1,11 +1,13 @@
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
-const forkTsCheckerWebpackPlugin = () => {
+const forkTsCheckerWebpackPlugin = ({
+  absPathToTsConfig
+}) => {
 
   const plugins = [
     new ForkTsCheckerWebpackPlugin({
       typescript: {
-        configFile: "../tsconfig.json",
+        configFile: absPathToTsConfig,
         diagnosticOptions: {
           semantic: true,
           syntactic: true,
