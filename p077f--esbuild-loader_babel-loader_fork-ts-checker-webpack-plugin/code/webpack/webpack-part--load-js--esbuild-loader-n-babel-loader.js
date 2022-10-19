@@ -1,4 +1,4 @@
-const loadJs_tsLoader_babelLoader = () => {
+const loadJs_esBuildLoader_babelLoader = () => {
 
   const module = {
     rules: [
@@ -27,4 +27,4 @@ const loadJs_tsLoader_babelLoader = () => {
 }
 
 
-module.exports = loadJs_tsLoader_babelLoader
+module.exports = loadJs_esBuildLoader_babelLoader
